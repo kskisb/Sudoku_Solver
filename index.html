@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>フォームに入力された数値の取得</title>
+    <style>
+        input {
+            width: 40px;
+        }
+    </style>
+</head>
+ 
+<body>
+    <form>
+        <table>
+            <thead>Input:</thead>
+            <tbody>
+                <tr>
+                    <td><input type="number" id="input11"></td>
+                    <td><input type="number" id="input12"></td>
+                    <td><input type="number" id="input13"></td>
+                    <td><input type="number" id="input14"></td>
+                    <td><input type="number" id="input15"></td>
+                    <td><input type="number" id="input16"></td>
+                    <td><input type="number" id="input17"></td>
+                    <td><input type="number" id="input18"></td>
+                    <td><input type="number" id="input19"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="input21"></td>
+                    <td><input type="number" id="input22"></td>
+                    <td><input type="number" id="input23"></td>
+                    <td><input type="number" id="input24"></td>
+                    <td><input type="number" id="input25"></td>
+                    <td><input type="number" id="input26"></td>
+                    <td><input type="number" id="input27"></td>
+                    <td><input type="number" id="input28"></td>
+                    <td><input type="number" id="input29"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="input31"></td>
+                    <td><input type="number" id="input32"></td>
+                    <td><input type="number" id="input33"></td>
+                    <td><input type="number" id="input34"></td>
+                    <td><input type="number" id="input35"></td>
+                    <td><input type="number" id="input36"></td>
+                    <td><input type="number" id="input37"></td>
+                    <td><input type="number" id="input38"></td>
+                    <td><input type="number" id="input39"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="input41"></td>
+                    <td><input type="number" id="input42"></td>
+                    <td><input type="number" id="input43"></td>
+                    <td><input type="number" id="input44"></td>
+                    <td><input type="number" id="input45"></td>
+                    <td><input type="number" id="input46"></td>
+                    <td><input type="number" id="input47"></td>
+                    <td><input type="number" id="input48"></td>
+                    <td><input type="number" id="input49"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="input51"></td>
+                    <td><input type="number" id="input52"></td>
+                    <td><input type="number" id="input53"></td>
+                    <td><input type="number" id="input54"></td>
+                    <td><input type="number" id="input55"></td>
+                    <td><input type="number" id="input56"></td>
+                    <td><input type="number" id="input57"></td>
+                    <td><input type="number" id="input58"></td>
+                    <td><input type="number" id="input59"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="input61"></td>
+                    <td><input type="number" id="input62"></td>
+                    <td><input type="number" id="input63"></td>
+                    <td><input type="number" id="input64"></td>
+                    <td><input type="number" id="input65"></td>
+                    <td><input type="number" id="input66"></td>
+                    <td><input type="number" id="input67"></td>
+                    <td><input type="number" id="input68"></td>
+                    <td><input type="number" id="input69"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="input71"></td>
+                    <td><input type="number" id="input72"></td>
+                    <td><input type="number" id="input73"></td>
+                    <td><input type="number" id="input74"></td>
+                    <td><input type="number" id="input75"></td>
+                    <td><input type="number" id="input76"></td>
+                    <td><input type="number" id="input77"></td>
+                    <td><input type="number" id="input78"></td>
+                    <td><input type="number" id="input79"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="input81"></td>
+                    <td><input type="number" id="input82"></td>
+                    <td><input type="number" id="input83"></td>
+                    <td><input type="number" id="input84"></td>
+                    <td><input type="number" id="input85"></td>
+                    <td><input type="number" id="input86"></td>
+                    <td><input type="number" id="input87"></td>
+                    <td><input type="number" id="input88"></td>
+                    <td><input type="number" id="input89"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="input91"></td>
+                    <td><input type="number" id="input92"></td>
+                    <td><input type="number" id="input93"></td>
+                    <td><input type="number" id="input94"></td>
+                    <td><input type="number" id="input95"></td>
+                    <td><input type="number" id="input96"></td>
+                    <td><input type="number" id="input97"></td>
+                    <td><input type="number" id="input98"></td>
+                    <td><input type="number" id="input99"></td>
+                </tr>
+            </tbody>
+        </table>
+         
+        <button id="button">Calculate</button>
+    </form>
+
+    <table>
+        <thead>Answer:</thead>
+        <tbody>
+            <tr>
+                <td><input type="number" id="output11"></td>
+                <td><input type="number" id="output12"></td>
+                <td><input type="number" id="output13"></td>
+                <td><input type="number" id="output14"></td>
+                <td><input type="number" id="output15"></td>
+                <td><input type="number" id="output16"></td>
+                <td><input type="number" id="output17"></td>
+                <td><input type="number" id="output18"></td>
+                <td><input type="number" id="output19"></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="output21"></td>
+                <td><input type="number" id="output22"></td>
+                <td><input type="number" id="output23"></td>
+                <td><input type="number" id="output24"></td>
+                <td><input type="number" id="output25"></td>
+                <td><input type="number" id="output26"></td>
+                <td><input type="number" id="output27"></td>
+                <td><input type="number" id="output28"></td>
+                <td><input type="number" id="output29"></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="output31"></td>
+                <td><input type="number" id="output32"></td>
+                <td><input type="number" id="output33"></td>
+                <td><input type="number" id="output34"></td>
+                <td><input type="number" id="output35"></td>
+                <td><input type="number" id="output36"></td>
+                <td><input type="number" id="output37"></td>
+                <td><input type="number" id="output38"></td>
+                <td><input type="number" id="output39"></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="output41"></td>
+                <td><input type="number" id="output42"></td>
+                <td><input type="number" id="output43"></td>
+                <td><input type="number" id="output44"></td>
+                <td><input type="number" id="output45"></td>
+                <td><input type="number" id="output46"></td>
+                <td><input type="number" id="output47"></td>
+                <td><input type="number" id="output48"></td>
+                <td><input type="number" id="output49"></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="output51"></td>
+                <td><input type="number" id="output52"></td>
+                <td><input type="number" id="output53"></td>
+                <td><input type="number" id="output54"></td>
+                <td><input type="number" id="output55"></td>
+                <td><input type="number" id="output56"></td>
+                <td><input type="number" id="output57"></td>
+                <td><input type="number" id="output58"></td>
+                <td><input type="number" id="output59"></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="output61"></td>
+                <td><input type="number" id="output62"></td>
+                <td><input type="number" id="output63"></td>
+                <td><input type="number" id="output64"></td>
+                <td><input type="number" id="output65"></td>
+                <td><input type="number" id="output66"></td>
+                <td><input type="number" id="output67"></td>
+                <td><input type="number" id="output68"></td>
+                <td><input type="number" id="output69"></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="output71"></td>
+                <td><input type="number" id="output72"></td>
+                <td><input type="number" id="output73"></td>
+                <td><input type="number" id="output74"></td>
+                <td><input type="number" id="output75"></td>
+                <td><input type="number" id="output76"></td>
+                <td><input type="number" id="output77"></td>
+                <td><input type="number" id="output78"></td>
+                <td><input type="number" id="output79"></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="output81"></td>
+                <td><input type="number" id="output82"></td>
+                <td><input type="number" id="output83"></td>
+                <td><input type="number" id="output84"></td>
+                <td><input type="number" id="output85"></td>
+                <td><input type="number" id="output86"></td>
+                <td><input type="number" id="output87"></td>
+                <td><input type="number" id="output88"></td>
+                <td><input type="number" id="output89"></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="output91"></td>
+                <td><input type="number" id="output92"></td>
+                <td><input type="number" id="output93"></td>
+                <td><input type="number" id="output94"></td>
+                <td><input type="number" id="output95"></td>
+                <td><input type="number" id="output96"></td>
+                <td><input type="number" id="output97"></td>
+                <td><input type="number" id="output98"></td>
+                <td><input type="number" id="output99"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+ 
+<script>
+
+function check(field, si, sj) {
+    // 行ごとに同じ文字がないかチェック
+    let num1 = new Array(10).fill(0);
+    for (let j = 0; j < 9; j++) {
+        if (field[si][j] === -1) {
+            continue;
+        }
+        if (num1[field[si][j]] === 1) {
+            return false;
+        } else {
+            num1[field[si][j]]++;
+        }
+    }
+
+    // 列ごとに同じ文字がないかチェック
+    let num2 = new Array(10).fill(0);
+    for (let i = 0; i < 9; i++) {
+        if (field[i][sj] === -1) {
+            continue;
+        }
+        if (num2[field[i][sj]] === 1) {
+            return false;
+        } else {
+            num2[field[i][sj]]++;
+        }
+    }
+
+    // ブロックごとに同じ文字がないかチェック
+    if (si <= 2) si = 0;
+    else if (si <= 5) si = 3;
+    else si = 6;
+
+    if (sj <= 2) sj = 0;
+    else if (sj <= 5) sj = 3;
+    else sj = 6;
+
+    let num3 = new Array(10).fill(0);
+    for (let k = 0; k < 3; k++) {
+        for (let l = 0; l < 3; l++) {
+            if (field[si + k][sj + l] === -1) {
+                continue;
+            }
+            if (num3[field[si + k][sj + l]] === 1) {
+                return false;
+            } else {
+                num3[field[si + k][sj + l]]++;
+            }
+        }
+    }
+
+    return true;
+}
+
+function rec(field) {
+    let flag = true;
+    for (let i = 0; i < 9; i++) {
+        for (let j = 0; j < 9; j++) {
+            if (field[i][j] === -1) {
+                flag = false;
+            }
+        }
+    }
+    if (flag) {
+        for(let i=1; i<=9; i++) {
+            for(let j=1; j<=9; j++) {
+                var out_id = "output" + i + j;
+                document.getElementById(out_id).value = field[i-1][j-1];
+            }
+        }
+        return;
+    }
+
+    let si = -1, sj = -1;
+    for (let i = 0; i < 9; i++) {
+        for (let j = 0; j < 9; j++) {
+            if (field[i][j] === -1) {
+                si = i;
+                sj = j;
+            }
+        }
+    }
+
+    for (let k = 1; k < 10; k++) {
+        field[si][sj] = k;
+        if (!check(field, si, sj)) continue;
+        rec(field);
+    }
+    field[si][sj] = -1;
+}
+ 
+// ボタンの要素を取得
+var button = document.getElementById("button");
+ 
+// ボタンをクリックした時の処理
+button.addEventListener("click", function(e) {
+ 
+    e.preventDefault();
+
+    var field = new Array(9)
+    for(let i=0; i<9; i++) {
+        field[i] = new Array(9);
+    }
+
+    for(let i=1; i<=9; i++) {
+        for(let j=1; j<=9; j++) {
+            var in_id = "input" + i + j;
+            field[i-1][j-1] = document.getElementById(in_id).value;
+            if(!field[i-1][j-1]) field[i-1][j-1] = -1;
+        }
+    }
+
+    rec(field);
+});
+ 
+</script>
+ 
+</html>
