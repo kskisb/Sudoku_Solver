@@ -4,10 +4,3 @@ input {
     text-align: center;
     margin: 0;
 }
-
-@media (max-width: 576px) {
-    input {
-        width: 80px;
-        height: 80px;
-    }
-}
