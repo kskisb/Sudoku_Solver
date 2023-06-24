@@ -88,27 +88,27 @@ function rec(field) {
     }
     field[si][sj] = -1;
 }
- 
-// ボタンの要素を取得
-var button = document.getElementById("button");
- 
-// 入力を受け取り、計算開始ボタンが押されたら計算を開始する
-button.addEventListener("click", function(e) {
- 
-    e.preventDefault();
 
-    var field = new Array(9)
-    for(let i=0; i<9; i++) {
-        field[i] = new Array(9);
-    }
+var field = new Array(9)
+for(let i=0; i<9; i++) {
+    field[i] = new Array(9);
+}
 
+function checkInput() {
     for(let i=1; i<=9; i++) {
         for(let j=1; j<=9; j++) {
             var in_id = "input" + i + j;
-            field[i-1][j-1] = parseInt(document.getElementById(in_id).value);
+            field[i-1][j-1] = document.getElementById(in_id).value;
             if(!field[i-1][j-1]) field[i-1][j-1] = -1;
         }
     }
+}
 
+// ボタンの要素を取得
+var button = document.getElementById("button");
+ 
+// 計算開始ボタンが押されたら計算を開始する
+button.addEventListener("click", function(e) {
+    e.preventDefault();
     rec(field);
 });
