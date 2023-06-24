@@ -89,16 +89,22 @@ function rec(field) {
     field[si][sj] = -1;
 }
 
+// 盤面を表す配列宣言
 var field = new Array(9)
 for(let i=0; i<9; i++) {
     field[i] = new Array(9);
 }
 
+// 入力を受け取り、適切な値がチェックする
 function checkInput() {
     for(let i=1; i<=9; i++) {
         for(let j=1; j<=9; j++) {
             var in_id = "input" + i + j;
-            field[i-1][j-1] = document.getElementById(in_id).value;
+            var number = document.getElementById(in_id).value;
+            if(number.match(/[1-9]+/g) != number) {
+                document.getElementById(in_id).value = "";
+            }
+            field[i-1][j-1] = number;
             if(!field[i-1][j-1]) field[i-1][j-1] = -1;
         }
     }
