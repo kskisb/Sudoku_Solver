@@ -3,7 +3,7 @@ function check(field, si, sj) {
     // 行ごとに同じ文字がないかチェック
     let num1 = new Array(10).fill(0);
     for (let j = 0; j < 9; j++) {
-        if (field[si][j] === -1) {
+        if (field[si][sj] === -1) {
             continue;
         }
         if (num1[field[si][j]] === 1) {
@@ -112,7 +112,7 @@ function checkInput() {
 
 // ボタンの要素を取得
 var button = document.getElementById("button");
- 
+
 // 計算開始ボタンが押されたら計算を開始する
 button.addEventListener("click", function(e) {
     e.preventDefault();
