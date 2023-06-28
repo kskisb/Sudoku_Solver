@@ -89,7 +89,7 @@ function rec(field) {
     field[si][sj] = -1;
 }
 
-// 盤面を表す配列宣言
+// 盤面を表す配列を宣言
 var field = new Array(9)
 for(let i=0; i<9; i++) {
     field[i] = new Array(9);
@@ -101,6 +101,7 @@ function checkInput() {
         for(let j=1; j<=9; j++) {
             var in_id = "input" + i + j;
             var number = document.getElementById(in_id).value;
+            // 入力が1~9の数字以外だったらその入力を無効化する
             if(number.match(/[1-9]+/g) != number) {
                 document.getElementById(in_id).value = "";
             }
