@@ -8,10 +8,10 @@ input {
 
 @media (max-width:460px) {
     input {
-        width: 75px;
-        height: 75px;
+        width: 85px;
+        height: 85px;
         text-align: center;
         margin: 0;
-        font-size: 30px;
+        font-size: 35px;
     }
 }
