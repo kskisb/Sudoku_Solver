@@ -1,0 +1,17 @@
+input {
+    width: 65px;
+    height: 65px;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+}
+
+@media (max-width:460px) {
+    input {
+        width: 75px;
+        height: 75px;
+        text-align: center;
+        margin: 0;
+        font-size: 30px;
+    }
+}
